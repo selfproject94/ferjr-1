@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" type="text/css" href="content.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+
+    <body>
+
+        <img class="bg" src="R.jpg">
+
+        <div class="header">
+                                 
+            <div class="logo">                           
+                n3<img class="logo-icon" src="icon/Capture2.PNG">32              
+            </div>
+                
+            <div class="text-0">
+               SPRITE MAKER 
+            </div>            
+        </div>
+        
+        <div class="container-1">
+
+            <div class="inside-container-1">            
+                <h1 class="text-1">Greetings! I'm n3o32,</h1>
+            
+                <h1 class="text-2">a passionate sprite maker with an unwavering love for pixel art. Nestled in the vibrant realm of digital creativity, I have honed my skills to bring characters, environments, and animations to life in the enchanting world of sprites.</h1>
+               
+                <h2 class="text-3"> Follow Me
+                    <a href="https://www.tiktok.com/@n3o32?_t=8jEpIiimwxL&_r=1">
+                    <img  src="icon/tiktok.svg">
+                    </a> 
+                </h2>
+
+            </div>
+
+            <div class="inside-container-1">        
+                <video class="background-video" autoplay muted loop id="background">
+                    <source src="haha3.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                        
+                </video>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="set"><h2 class="text-4">My Works</h2></div>
+            
+
+
+
+        <!-- <div class="just-indication"></div> -->
+
+            <div class="container-2">
+
+    
+
+                    <div class="inside-container-2">
+                        
+                        <video class="card-body" autoplay muted loop id="myVideo" onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="v1.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        
+                        
+                            <h2>Video 1</h2>
+                        
+                        
+                    </div>
+
+                    <div class="inside-container-2">
+                        <video class="card-body" autoplay muted loop id="myVideo" onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="v2.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        
+                         
+                            <h2>Video 2</h2>
+                         
+                        
+                    </div>
+
+                    <div class="inside-container-2">
+                        <video class="card-body" autoplay muted loop id="myVideo" onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="v3.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        
+                         
+                            <h2>Video 3</h2>
+                         
+                        
+                    </div>
+
+                    <div class="inside-container-2">
+                        <video class="card-body" autoplay muted loop id="myVideo" onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="v4.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        
+                        
+                            <h2>Video 4</h2>
+                         
+                        
+                    </div>
+
+                    <div class="inside-container-2">
+                        <video class="card-body" autoplay muted loop id="myVideo" onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="v5.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        
+                        
+                            <h2>Video 5</h2>
+                         
+                        
+                    </div>
+
+                    <div class="inside-container-2">
+                        <video class="card-body" autoplay muted loop id="myVideo" onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="v6.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        
+                        
+                            <h2>Video 6</h2>
+                         
+                        
+                    </div>
+                
+
+
+        
+            </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let options = {
+                    root: null,
+                    rootMargin: "0px 0px 0px 50px",
+                    threshold: 0.6
+                };
+                let observer = new IntersectionObserver(beTouching, options);
+                document.querySelectorAll(".inside-container-2, .text-3, .text-4").forEach (p=> {
+                    observer.observe(p);
+                    
+                });
+                
+            });
+            function beTouching(entries, ob){
+                entries.forEach(entry=>{
+                    if (entry.isIntersecting) {
+                        console.log("intersecting");
+                        // console.log(entry.time, entry.intersectionRatio);
+                        entry.target.classList.add("active");
+                        // ob.unobserve(entry.target)
+
+                    } else{
+                        entry.target.classList.remove("active");
+                    }
+
+                });
+            }
+        </script>
+        
+    </body>
+</html>
